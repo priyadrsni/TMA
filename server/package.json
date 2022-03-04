@@ -4,17 +4,28 @@
   "description": "",
   "main": "app.js",
   "scripts": {
+    "lint": "npx eslint *.js",
+    "build": "babel app.js -d dist",
     "dev": "nodemon app.js",
-    "server": "node app.js"
+    "server": "npm run build && node dist/index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/cli": "^7.17.6",
+    "@babel/core": "^7.17.5",
+    "@babel/preset-env": "^7.16.11",
     "cookie-parser": "^1.4.6",
     "dotenv": "^16.0.0",
+    "eslint": "^8.10.0",
     "express": "^4.17.3",
-    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.2.4",
     "nodemon": "^2.0.15"
+  },
+  "type": "module",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^8.5.1"
   }
 }
