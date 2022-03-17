@@ -1,8 +1,8 @@
-import usersReducer from "./usersReducer.js";
+import { authentication } from "./usersReducer";
 import { combineReducers } from "redux";
 
 const reducers = combineReducers({
-    users: usersReducer
+  isLoggedIn: authentication,
 });
 
 export default reducers;
